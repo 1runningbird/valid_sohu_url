@@ -33,7 +33,7 @@ def valid():
     try:
         r = urllib2.urlopen('http://' + url, timeout=2)
         if r.code >= 400:
-            logger.warning('%(url)s-%(code)s-%(msg)s' % {
+            logger.warning('%(url)s - %(code)s - %(msg)s' % {
                 'url': r.url,
                 'code': r.code,
                 'msg': r.msg
@@ -41,7 +41,7 @@ def valid():
         content = r.read()
     except Exception as e:
         content = ''
-        logger.warning('%(url)s-%(code)s-%(msg)s' % {
+        logger.warning('%(url)s - %(code)s - %(msg)s' % {
             'url': url,
             'code': 0,
             'msg': str(e)
